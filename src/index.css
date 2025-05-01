@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -14,7 +16,13 @@
   --color-card-foreground: var(--card-foreground);
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
+  --color-light-bg: var(--color-slate-50);
+  --color-light-tx: var(--color-zinc-50);
+  --color-medium-tx: var(--color-zinc-500);
+  --color-dark-bg: var(--color-slate-900);
+  --color-dark-tx: var(--color-zinc-900);
+  --color-primary: var(--color-indigo-700);
+  --color-primary-second: var(--color-lime-700);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
