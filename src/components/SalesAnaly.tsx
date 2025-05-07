@@ -2,9 +2,9 @@ import { PlusCircle } from "lucide-react";
 
 export default function SalesAnalyticsHeader() {
   return (
-    <div className="flex items-start justify-between bg-white px-6 py-4">
+    <div className="flex items-start justify-between px-6 py-4">
       <div>
-        <h2 className="text-2xl font-semibold text-gray-900">
+        <h2 className="dark:text-light-tx text-2xl font-semibold text-gray-900">
           Sales Analytics
         </h2>
         <p className="text-gray-500">

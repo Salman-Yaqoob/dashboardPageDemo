@@ -1,6 +1,9 @@
+import EmailSentCard from "./components/Chart";
 import Navbar from "./components/Navbar";
 import SalesAnalyticsHeader from "./components/SalesAnaly";
+import SalesGraphCard from "./components/SalesGraph";
 import Sidebar from "./components/Sidebar";
+import StatCards from "./components/StatCards";
 import Themes from "./components/Themes";
 
 function App() {
@@ -13,7 +16,11 @@ function App() {
           <Navbar />
           <SalesAnalyticsHeader />
           <hr className="bg-medium-tx" />
-          <div></div>
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-[1fr_1fr_0.75fr]">
+            <EmailSentCard />
+            <SalesGraphCard />
+            <StatCards />
+          </div>
         </div>
       </div>
     </div>
