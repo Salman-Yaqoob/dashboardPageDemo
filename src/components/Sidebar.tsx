@@ -30,13 +30,13 @@ const icons = [
 
 function Sidebar() {
   return (
-    <div className="flex h-screen w-16 flex-col items-center justify-between bg-slate-200 py-6 shadow-md dark:bg-slate-700">
+    <div className="relative flex w-16 flex-col items-center justify-between bg-slate-200 py-6 shadow-md dark:bg-slate-700">
       <div className="flex flex-col items-center space-y-8">
         <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-600 text-white">
-          <SlidersHorizontal size={20} />
+          <SlidersHorizontal size={30} />
         </div>
 
-        <div className="flex flex-col items-center space-y-6">
+        <div className="required: flex flex-col items-center space-y-6 *:last:absolute *:last:bottom-4 *:last:left-5">
           {icons.map((item, idx) =>
             item.divider ? (
               <hr

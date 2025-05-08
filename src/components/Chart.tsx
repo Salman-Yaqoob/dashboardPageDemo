@@ -30,8 +30,10 @@ export default function EmailSentCard() {
     value: "49.5%",
   });
 
+  const [drop, setDrop] = useState(false);
+
   return (
-    <div className="bg-light-bg dark:bg-dark-bg w-full max-w-md rounded-lg border p-6 shadow-sm">
+    <div className="bg-light-bg dark:bg-dark-bg isolate w-full max-w-md rounded-lg border p-6 shadow-sm">
       {/* Header */}
       <div className="mb-4 flex items-start justify-between">
         <div>
@@ -42,9 +44,21 @@ export default function EmailSentCard() {
             Detailed data of your email inbox
           </p>
         </div>
-        <button className="flex items-center gap-1 rounded-md border px-3 py-1.5 text-sm text-gray-700 hover:bg-gray-50">
+        <button
+          onClick={() => setDrop(!drop)}
+          className="group relative z-10 flex cursor-pointer items-center gap-1 rounded-md border px-3 py-1.5 text-sm text-gray-700 transition-all duration-300 hover:bg-gray-50"
+        >
           Monthly
-          <ChevronDown size={16} />
+          <ChevronDown
+            size={16}
+            className="transition-all duration-300 group-active:animate-bounce"
+          />
+          {drop && (
+            <div className="absolute top-10 flex flex-col overflow-hidden rounded-lg border-2 bg-white *:w-full *:px-5 *:py-1 **:cursor-pointer *:hover:bg-black/20 dark:bg-black *:hover:dark:bg-white/20">
+              <p> Edit</p>
+              <p> Delete </p>
+            </div>
+          )}
         </button>
       </div>
 
